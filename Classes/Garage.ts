@@ -34,7 +34,7 @@ export class Garage {
      * @param v
      */
     public retirerVehicule(v: Vehicule){
-        this.vehiculeList.slice(this.vehiculeList.indexOf(v), 1);
+        this.vehiculeList.splice(this.vehiculeList.indexOf(v), 1);
     }
 
     /**
