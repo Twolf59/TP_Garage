@@ -7,10 +7,16 @@ export class Moto extends Vehicule {
         super(marque, moteur);
     }
 
+    /**
+     * Faire un wheeling de la moto
+     */
     public faireUnWheeling(){
         console.log("Wheel");
     }
 
+    /**
+     * Afficher la moto
+     */
     afficherVehicule() {
         console.log("La moto est de marque " + this.marque);
     }

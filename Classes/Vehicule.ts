@@ -18,18 +18,30 @@ export abstract class Vehicule {
         return this._moteur;
     }
 
+    /**
+     * Faire avancer le véhicule
+     */
     public avancer(){
         console.log("Le Vehicule avance");
     }
 
+    /**
+     * Faire reculer le véhicule
+     */
     public reculer(){
         console.log("Le Vehicule recule");
     }
 
+    /**
+     * Faire freiner le véhicule
+     */
     public freiner(){
         console.log("Le Vehicule freine");
     }
 
+    /**
+     * Afficher le véhicule
+     */
     public afficherVehicule(){
         console.log("Le véhicule est de marque " + this.marque);
     }

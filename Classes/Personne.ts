@@ -16,6 +16,9 @@ export abstract class Personne {
         return this._nom;
     }
 
+    /**
+     * Présenter la personne
+     */
     public sePresente(){
         console.log("Bonjour, je m'appelle " + this.nom + " et j'ai " + this.age + " ans");
     }

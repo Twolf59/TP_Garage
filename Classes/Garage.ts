@@ -9,8 +9,8 @@ export class Garage {
     private _vehiculeList: Vehicule[] = []
     private _garagisteList: Garagiste[] = []
 
-    constructor(vehiculeList: Vehicule[]) {
-        this._vehiculeList = vehiculeList;
+    constructor(garagisteList: Garagiste[]) {
+        this._garagisteList = garagisteList;
     }
 
     get vehiculeList(): Vehicule[] {
@@ -21,18 +21,38 @@ export class Garage {
         return this._garagisteList;
     }
 
+    /**
+     * Ajouter un véhicule au garage
+     * @param vehicule
+     */
     public ajouterVehicule(vehicule: Vehicule){
         this.vehiculeList.push(vehicule);
     }
 
+    /**
+     * Retirer un véhicule du garage
+     * @param v
+     */
     public retirerVehicule(v: Vehicule){
         this.vehiculeList.slice(this.vehiculeList.indexOf(v), 1);
     }
 
+    /**
+     * Afficher le garage
+     */
     public afficherGarage(){
-        console.log("Le garage ");
+        this._garagisteList.map(garagiste =>{
+            garagiste.sePresente();
+        })
+
+        this.vehiculeList.map(vehicule =>{
+            vehicule.afficherVehicule();
+        })
     }
 
+    /**
+     * Afficher les motos du garage
+     */
     public afficherMotos(){
         this.vehiculeList.forEach(vehicule => {
             if(vehicule instanceof Moto){
@@ -41,6 +61,9 @@ export class Garage {
         })
     }
 
+    /**
+     * Afficher les voitures du garage
+     */
     public afficherVoiture(){
         this.vehiculeList.forEach(vehicule => {
             if(vehicule instanceof Voiture){
@@ -49,6 +72,9 @@ export class Garage {
         })
     }
 
+    /**
+     * Afficher les camions du garage
+     */
     public afficherCamion(){
         this.vehiculeList.forEach(vehicule => {
             if(vehicule instanceof Camion){

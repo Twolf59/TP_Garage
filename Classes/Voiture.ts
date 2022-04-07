@@ -7,6 +7,9 @@ export class Voiture extends Vehicule {
         super(marque, moteur);
     }
 
+    /**
+     * Afficher la voiture
+     */
     afficherVehicule() {
         console.log("La voiture est de marque " + this.marque);
     }

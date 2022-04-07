@@ -7,14 +7,23 @@ export class Camion extends Vehicule {
         super(marque, moteur);
     }
 
+    /**
+     * Attacher une remorqie au camion
+     */
     public attacherRemorqe(){
         console.log("Remorque attachée");
     }
 
+    /**
+     * Detacher la remorque du camion
+     */
     public detacherRemorque(){
         console.log("Remorque détachée");
     }
 
+    /**
+     * Afficher le camion
+     */
     afficherVehicule() {
         console.log("Le camion est de marque " + this.marque);
     }
